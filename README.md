@@ -1,4 +1,4 @@
-markdown_content = """# 🚀 .NET Core CI/CD Pipeline với GitHub Actions
+# 🚀 .NET Core CI/CD Pipeline với GitHub Actions
 
 Dự án này thiết lập một quy trình quản lý mã nguồn chuyên nghiệp bằng **Gitflow** và **GitHub Actions** cho ứng dụng .NET. Hệ thống tự động hóa toàn bộ các khâu từ khôi phục gói phụ thuộc, biên dịch mã nguồn đến kiểm thử tự động, đảm bảo mọi thay đổi đều ổn định trước khi triển khai.
 

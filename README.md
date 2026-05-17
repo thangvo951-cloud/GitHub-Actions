@@ -63,5 +63,6 @@ Mở Terminal hoặc Command Prompt và chạy lệnh sau để tải dự án v
 ```bash
 git clone [https://github.com/thangvo951-cloud/GitHub-Actions.git](https://github.com/thangvo951-cloud/GitHub-Actions.git)
 cd GitHub-Actions
+```
 ---
-*Dự án của nhóm 21, cchúc bạn có những trải nghiệm tuyệt vời khi khám phá dự án này!* 🚀
+*Dự án của nhóm 21, chúc bạn có những trải nghiệm tuyệt vời khi khám phá dự án này!* 🚀

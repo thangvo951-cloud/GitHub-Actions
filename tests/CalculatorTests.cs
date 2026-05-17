@@ -1,5 +1,5 @@
 using Xunit;
-using MyProject; // Đảm bảo đúng namespace của dự án chính
+using MyProject;
 
 namespace MyProject.Tests
 {

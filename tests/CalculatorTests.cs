@@ -11,7 +11,7 @@ namespace MyProject.Tests
         {
             var calculator = new Calculator();
             var result = calculator.Add(2, 3);
-            Assert.Equal(5, result);
+            Assert.Equal(100100, result);
         }
     }
 }

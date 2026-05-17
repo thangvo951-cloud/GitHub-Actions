@@ -11,34 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Bước 1: Lấy mã nguồn từ repo
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Bước 2: Thiết lập môi trường
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
 
-      # Bước 3: Khôi phục các gói phụ thuộc (Restore)
-      - name: Restore
-        run: dotnet restore GitHub-Actions.sln
+      - name: Restore dependencies
+        run: dotnet restore
 
-      # Bước 4: Biên dịch dự án (Build)
       - name: Build
-        run: dotnet build GitHub-Actions.sln --configuration Release --no-restore
+        run: dotnet build --no-restore
 
-      # Bước 5: Chạy các bài kiểm tra Unit Test (Test)
       - name: Test
-        run: dotnet test GitHub-Actions.sln --no-build --verbosity normal
-
-  deploy:
-    needs: build-and-test
-    runs-on: ubuntu-latest 
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
-    
-    steps:
-      # Bước 6: Thông báo triển khai
-      - name: Notify Deployment
-        run: echo "Deploying to server completed!"
+        run: dotnet test --no-build --verbosity normal

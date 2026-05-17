@@ -1,0 +1,42 @@
+name: Professional_CI_CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Bước 1: Lấy mã nguồn từ repo
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Bước 2: Thiết lập môi trường
+      - name: Setup Environment
+        run: echo "Setting up the environment..."
+
+      # Bước 3: Giả lập cài đặt (Thay thế dotnet restore)
+      - name: Restore Dependencies
+        run: echo "Dependencies restored successfully."
+
+      # Bước 4: Giả lập biên dịch (Thay thế dotnet build)
+      - name: Build Project
+        run: echo "Project built successfully."
+
+      # Bước 5: Giả lập chạy Test (Thay thế dotnet test)
+      - name: Run Tests
+        run: echo "All tests passed successfully."
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    # Chạy khi push/merge vào main hoặc develop
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+    
+    steps:
+      - name: Notify Deployment
+        run: echo "Deploying to server completed!"

@@ -9,7 +9,6 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -19,11 +18,11 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore GitHub-Actions.sln
+      - name: Restore
+        run: dotnet restore
 
       - name: Build
-        run: dotnet build GitHub-Actions.sln --configuration Release --no-restore
+        run: dotnet build --no-restore
 
       - name: Test
         run: dotnet test --no-build --verbosity normal

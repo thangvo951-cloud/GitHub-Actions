@@ -26,4 +26,4 @@ jobs:
         run: dotnet build GitHub-Actions.sln --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test GitHub-Actions.sln --no-build --verbosity normal
+        run: dotnet test --no-build --verbosity normal

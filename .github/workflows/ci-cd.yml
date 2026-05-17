@@ -17,28 +17,28 @@ jobs:
 
       # Bước 2: Thiết lập môi trường
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
 
-      # Bước 3: Giả lập cài đặt (Thay thế dotnet restore)
+      # Bước 3: Khôi phục các gói phụ thuộc (Restore)
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore GitHub-Actions.sln
 
-      # Bước 4: Giả lập biên dịch (Thay thế dotnet build)
+      # Bước 4: Biên dịch dự án (Build)
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build GitHub-Actions.sln --configuration Release --no-restore
 
-      # Bước 5: Giả lập chạy Test (Thay thế dotnet test)
+      # Bước 5: Chạy các bài kiểm tra Unit Test (Test)
       - name: Test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test GitHub-Actions.sln --no-build --verbosity normal
 
   deploy:
     needs: build-and-test
-    runs-on: ubuntu-latest
-    # Chạy khi push/merge vào main hoặc develop
+    runs-on: ubuntu-latestgit
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
     
     steps:
+      # Bước 6: Thông báo triển khai
       - name: Notify Deployment
         run: echo "Deploying to server completed!"

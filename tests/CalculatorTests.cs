@@ -1,17 +1,16 @@
-
 using Xunit;
-using MyProject;
+using MyProject; // Đảm bảo đúng namespace của dự án chính
 
 namespace MyProject.Tests
 {
     public class CalculatorTests
     {
-        [Fact]
-        public void Add_ShouldReturnSumOfTwoNumbers()
+        [Fact] 
+        public void Add_ShouldReturnCorrectSum()
         {
-            var calculator = new Calculator();
-            var result = calculator.Add(2, 3);
-            Assert.Equal(100100, result);
+            var calc = new Calculator();
+            var result = calc.Add(2, 3);
+            Assert.Equal(, result); 
         }
     }
 }

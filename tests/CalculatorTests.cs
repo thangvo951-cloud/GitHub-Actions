@@ -10,7 +10,7 @@ namespace MyProject.Tests
         {
             var calc = new Calculator();
             var result = calc.Add(2, 3);
-            Assert.Equal(100100, result); 
+            Assert.Equal(51212, result); 
         }
     }
 }

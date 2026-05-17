@@ -23,15 +23,15 @@ jobs:
 
       # Bước 3: Khôi phục các gói phụ thuộc (Restore)
       - name: Restore
-        run: dotnet restore GitHub-Actions.sln
+        run: dotnet restore GitHub-Actions.slnx
 
       # Bước 4: Biên dịch dự án (Build)
       - name: Build
-        run: dotnet build GitHub-Actions.sln --configuration Release --no-restore
+        run: dotnet build GitHub-Actions.slnx --configuration Release --no-restore
 
       # Bước 5: Chạy các bài kiểm tra Unit Test (Test)
       - name: Test
-        run: dotnet test GitHub-Actions.sln --no-build --verbosity normal
+        run: dotnet test GitHub-Actions.slnx --no-build --verbosity normal
 
   deploy:
     needs: build-and-test

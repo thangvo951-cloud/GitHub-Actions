@@ -26,7 +26,7 @@ Mỗi khi có mã nguồn được đẩy lên các nhánh `main` hoặc `develo
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Chạy Trực Tiếp Trên Máy (Local)
+## 🚀 Cách thức cài đặt và chạy trực tiếp trên máy (Local)
 
 Để chạy dự án này dưới máy cá nhân và kiểm tra các tính năng, bạn hãy thực hiện theo các bước sau:
 

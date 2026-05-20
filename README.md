@@ -26,23 +26,6 @@ Mỗi khi có mã nguồn được đẩy lên các nhánh `main` hoặc `develo
 
 ---
 
-## 📂 Cấu Trúc Thư Mục
-
-```text
-GITHUB-ACTIONS/
-├── .github/workflows/
-│   └── ci-cd.yml          # Cấu hình quy trình CI/CD
-├── src/
-│   ├── MyProject.csproj   # Dự án thực thi chính
-│   └── Program.cs         # Logic ứng dụng (Calculator)
-├── tests/
-│   ├── tests.csproj       # Dự án kiểm thử
-│   └── CalculatorTests.cs # Các kịch bản Unit Test
-└── GitHub-Actions.sln     # File quản lý tổng thể Solution
-```
-
----
-
 ## 🚀 Hướng Dẫn Cài Đặt & Chạy Trực Tiếp Trên Máy (Local)
 
 Để chạy dự án này dưới máy cá nhân và kiểm tra các tính năng, bạn hãy thực hiện theo các bước sau:
